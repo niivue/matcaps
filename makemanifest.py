@@ -5,7 +5,7 @@ import json
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: python makemanifest.py /path/to/jsons")
+        print("Usage: python makemanifest.py /path/to/jpgs")
         sys.exit(1)
 
     folder = sys.argv[1]
@@ -20,7 +20,7 @@ def main():
     files = [
         os.path.splitext(f)[0]
         for f in os.listdir(folder)
-        if f.endswith(".json") and f != "manifest.json"
+        if f.endswith(".jpg") and f != "manifest.json"
     ]
 
     # Sort alphabetically
